@@ -1,5 +1,7 @@
 # MetaRadar
 
+<img src="docs/assets/metaradar-icon.png" width="64" height="64" alt="MetaRadar radar icon">
+
 A lightweight, privacy-first Chrome extension for inspecting essential on-page SEO metadata.
 
 MetaRadar, aktif sayfanın temel SEO metadata bilgilerini tarayıcı içinde inceler ve sonuçları anlaşılır durum etiketleriyle gösterir. Manifest V3 ile geliştirilmiştir; sayfayı değiştirmez.
@@ -24,7 +26,7 @@ MetaRadar, aktif sayfanın temel SEO metadata bilgilerini tarayıcı içinde inc
 ![MetaRadar sayfa inceleme görünümü](docs/assets/screenshot-02.png)
 ![MetaRadar ek metadata sonuçları](docs/assets/screenshot-03.png)
 
-## Privacy first
+## Privacy
 
 - Tüm kontroller yerel olarak işlenir.
 - Backend veya external API yoktur.
@@ -44,7 +46,7 @@ Page DOM → Read / extract → Normalize → Evaluate → Render
 
 Vanilla HTML, CSS ve JavaScript kullanır; framework, runtime dependency veya build adımı yoktur.
 
-## Install locally
+## Local installation
 
 1. Repository'yi indirin veya clone edin.
 2. Chrome'da `chrome://extensions` adresini açın.

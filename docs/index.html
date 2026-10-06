@@ -1,33 +1,114 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="MetaRadar is a privacy-first Chrome extension for inspecting essential on-page SEO metadata locally.">
-<title>MetaRadar — Local SEO inspection</title>
-<link rel="icon" href="./assets/metaradar-icon.png" type="image/png">
-<link rel="stylesheet" href="./styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy-first Chrome extension for inspecting essential on-page SEO metadata locally.">
+  <meta name="theme-color" content="#101b26">
+  <meta property="og:title" content="MetaRadar — Local SEO inspection">
+  <meta property="og:description" content="Inspect essential on-page SEO metadata directly in your browser. No backend, tracking or external API.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://korayaltunbey.github.io/MetaRadar/">
+  <meta property="og:image" content="https://korayaltunbey.github.io/MetaRadar/assets/metaradar-icon.png">
+  <meta property="og:image:alt" content="MetaRadar radar icon">
+  <meta property="og:image:width" content="128">
+  <meta property="og:image:height" content="128">
+  <title>MetaRadar — Local SEO inspection</title>
+  <link rel="canonical" href="https://korayaltunbey.github.io/MetaRadar/">
+  <link rel="icon" href="./assets/metaradar-icon.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="wrap"><a class="brand" href="./"><img src="./assets/metaradar-icon.png" width="40" height="40" alt="">MetaRadar</a><nav aria-label="Main navigation"><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="https://github.com/korayaltunbey/MetaRadar">GitHub</a></nav></header>
-<main id="main" class="wrap">
-<section class="hero" aria-labelledby="hero-title">
-<div><img class="hero-icon" src="./assets/metaradar-icon.png" width="96" height="96" alt="MetaRadar radar icon"><h1 id="hero-title">MetaRadar</h1><p class="headline">Inspect essential on-page SEO metadata directly in your browser.</p><p class="muted">Privacy-first, local Chrome extension.<br>No backend. No tracking. No external API.</p><div class="actions"><a class="button primary" href="https://github.com/korayaltunbey/MetaRadar">View on GitHub</a><a class="button" href="./privacy-policy">Privacy Policy</a></div><p class="note">Version 1.0.0 · Manifest V3</p></div>
-<aside class="inspection" aria-label="Inspection overview"><div class="panel-heading"><span>Inside the popup</span><span>Local</span></div><p class="panel-title">One page.<br>A clearer view.</p><ul><li><span>Page title</span><span class="status passed">Passed</span></li><li><span>Meta description</span><span class="status warning">Warning</span></li><li><span>Canonical</span><span class="status error">Error</span></li></ul><small>Illustrative statuses. Results reflect the page you inspect.</small></aside>
-</section>
-<section id="features" aria-labelledby="features-title"><div class="section-heading"><h2 id="features-title">Features</h2><p>The essentials, in one popup.</p></div><div class="features">
-<article><h3>Page essentials</h3><p>Page title, meta description and H1.</p></article><article><h3>Indexing metadata</h3><p>Canonical links and meta robots directives.</p></article><article><h3>Language &amp; images</h3><p>HTML lang and missing image alt attributes.</p></article><article><h3>Social &amp; regional</h3><p>Open Graph metadata and hreflang links.</p></article><article><h3>Readable results</h3><p>Passed, Warning and Error labels with explanations.</p></article><article><h3>Your preferred theme</h3><p>System, Light and Dark appearance.</p></article>
-</div></section>
-<section aria-labelledby="privacy-title"><div class="section-heading"><h2 id="privacy-title">Privacy First</h2><p>Your page data stays on your device.</p></div><div class="privacy"><article><h3>100% Local</h3><p>Page checks run in your browser.</p></article><article><h3>No Tracking</h3><p>No analytics or telemetry.</p></article><article><h3>No Backend</h3><p>No accounts or server uploads.</p></article><article><h3>No External APIs</h3><p>No requests to third-party services.</p></article></div><p class="note">Page data and results are never persisted. Only <code>themePreference</code> is saved locally.</p></section>
-<section aria-labelledby="works-title"><div class="section-heading"><h2 id="works-title">How It Works</h2><p>A direct path from page to results.</p></div><ol class="workflow"><li>Page DOM</li><li>Read</li><li>Normalize</li><li>Evaluate</li><li>Results</li></ol><p class="note">Packaged HTML, CSS and JavaScript. No framework or dependencies. The page stays unchanged.</p></section>
-<section id="screenshots" aria-labelledby="screenshots-title"><div class="section-heading"><h2 id="screenshots-title">Screenshots</h2><p>A closer look at MetaRadar in Chrome.</p></div><div class="screenshots">
-<figure><a href="./assets/screenshot-01.png"><img src="./assets/screenshot-01.png" width="1280" height="800" loading="lazy" alt="MetaRadar popup on Wikidata showing page title and meta description checks"></a><figcaption>Metadata inspection alongside the active page.</figcaption></figure>
-<figure><a href="./assets/screenshot-02.png"><img src="./assets/screenshot-02.png" width="1280" height="800" loading="lazy" alt="MetaRadar in Light theme on Amazon showing page title and description results"></a><figcaption>Light theme: page title and description.</figcaption></figure>
-<figure><a href="./assets/screenshot-03.png"><img src="./assets/screenshot-03.png" width="1280" height="800" loading="lazy" alt="MetaRadar in Dark theme on Amazon showing Open Graph, H1, canonical and hreflang results"></a><figcaption>Dark theme: Open Graph, headings and alternate links.</figcaption></figure>
-</div></section>
-<section class="details" aria-label="Permissions and local installation"><div><h2>Permissions</h2><p class="muted">Three permissions for a focused tool.</p><dl><dt><code>activeTab</code></dt><dd>Temporary access to the active page when you invoke MetaRadar.</dd><dt><code>scripting</code></dt><dd>Runs the packaged, read-only DOM reader.</dd><dt><code>storage</code></dt><dd>Saves only your theme preference locally.</dd></dl></div><div><h2>Local Installation</h2><ol class="installation"><li>Download or clone the GitHub repository.</li><li>Open <code>chrome://extensions</code>.</li><li>Enable <strong>Developer mode</strong>.</li><li>Select <strong>Load unpacked</strong> and choose the project root.</li><li>Open a web page and click the MetaRadar icon.</li></ol><p class="note">Chrome Web Store publication is under consideration.</p></div></section>
-</main>
-<footer class="wrap"><div class="footer-top"><span class="brand">MetaRadar</span><nav aria-label="Footer navigation"><a href="https://github.com/korayaltunbey/MetaRadar">GitHub</a><a href="./privacy-policy">Privacy Policy</a><a href="./privacy-policy-tr" lang="tr">Türkçe Gizlilik Politikası</a></nav></div><div class="footer-bottom"><a href="mailto:altunbeykoray07@gmail.com">altunbeykoray07@gmail.com</a><span>2026</span></div></footer>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./"><img src="./assets/metaradar-icon.png" width="40" height="40" alt="">MetaRadar</a>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="https://github.com/korayaltunbey/MetaRadar">GitHub</a>
+    </nav>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <img class="hero-icon" src="./assets/metaradar-icon.png" width="96" height="96" alt="">
+        <h1 id="hero-title">MetaRadar</h1>
+        <p class="headline">Inspect essential on-page SEO metadata directly in your browser.</p>
+        <p class="hero-description">Fast, local inspection of page metadata with no backend, tracking or external API.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/korayaltunbey/MetaRadar">View on GitHub</a>
+          <a class="button" href="./privacy-policy">Privacy Policy</a>
+        </div>
+        <p class="version">Version 1.0.0 <span aria-hidden="true">·</span> Manifest V3</p>
+      </div>
+      <aside class="inspection" aria-labelledby="preview-title">
+        <div class="panel-heading">
+          <div class="panel-brand"><img src="./assets/metaradar-icon.png" width="32" height="32" alt=""><span>MetaRadar</span></div>
+          <span class="local-label">Local inspection</span>
+        </div>
+        <div class="panel-intro"><h2 id="preview-title">Inside the popup</h2><p>Essential checks at a glance.</p></div>
+        <ul class="preview-results">
+          <li><div class="result-heading"><span>Page title</span><span class="status passed">Passed</span></div><p class="preview-value">Example page title</p></li>
+          <li><div class="result-heading"><span>Meta description</span><span class="status warning">Warning</span></div><p class="preview-message">No meta description found.</p></li>
+          <li><div class="result-heading"><span>Canonical</span><span class="status error">Error</span></div><p class="preview-message">Canonical URL is invalid.</p></li>
+          <li><div class="result-heading"><span>H1</span><span class="status passed">Passed</span></div><p class="preview-value">One main heading</p></li>
+        </ul>
+        <p class="preview-note">Illustrative example. Actual results depend on the page you inspect.</p>
+      </aside>
+    </section>
+    <section id="features" aria-labelledby="features-title">
+      <div class="section-heading"><h2 id="features-title">Features</h2><p>The essentials, in one popup.</p></div>
+      <div class="features">
+        <article><h3>Page essentials</h3><p>Page title, meta description and H1.</p></article>
+        <article><h3>Indexing signals</h3><p>Canonical links and meta robots directives.</p></article>
+        <article><h3>Language</h3><p>The page’s HTML lang attribute.</p></article>
+        <article><h3>Images</h3><p>Images with missing alt attributes.</p></article>
+        <article><h3>Social &amp; regional</h3><p>Open Graph metadata and hreflang links.</p></article>
+        <article><h3>Readable results</h3><p>Passed, Warning and Error labels. System, Light and Dark themes.</p></article>
+      </div>
+    </section>
+    <section id="privacy" aria-labelledby="privacy-title">
+      <div class="section-heading"><h2 id="privacy-title">Privacy First</h2><p>Your page data stays on your device.</p></div>
+      <div class="privacy">
+        <article><h3>Local processing</h3><p>Page checks run in your browser.</p></article>
+        <article><h3>No tracking</h3><p>No analytics or telemetry.</p></article>
+        <article><h3>No backend</h3><p>No accounts or server uploads.</p></article>
+        <article><h3>No external APIs</h3><p>No requests to third-party services.</p></article>
+      </div>
+      <div class="privacy-summary"><p>Page data and inspection results are not persisted.<br>Only the theme preference is stored locally.</p><a class="text-link" href="./privacy-policy">Read the Privacy Policy</a></div>
+    </section>
+    <section aria-labelledby="works-title">
+      <div class="section-heading"><h2 id="works-title">How It Works</h2><p>A direct path from page to results.</p></div>
+      <ol class="workflow"><li><span>Page DOM</span></li><li><span>Read</span></li><li><span>Normalize</span></li><li><span>Evaluate</span></li><li><span>Results</span></li></ol>
+      <p class="note">Vanilla HTML, CSS and JavaScript.<br>No framework, runtime dependencies or build step.</p>
+    </section>
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <div class="section-heading"><h2 id="screenshots-title">Screenshots</h2><p>Real page inspections in Chrome. Select an image to view it at full size.</p></div>
+      <div class="screenshots">
+        <figure><a class="screenshot-frame" href="./assets/screenshot-01.png"><span class="window-bar" aria-hidden="true"><span>MetaRadar / Wikidata</span><span>System theme</span></span><img src="./assets/screenshot-01.png" width="1280" height="800" loading="lazy" alt="MetaRadar popup on Wikidata showing page title and meta description checks"></a><figcaption>Metadata inspection alongside the active page.</figcaption></figure>
+        <figure><a class="screenshot-frame" href="./assets/screenshot-02.png"><span class="window-bar" aria-hidden="true"><span>MetaRadar / Amazon</span><span>Light theme</span></span><img src="./assets/screenshot-02.png" width="1280" height="800" loading="lazy" alt="MetaRadar in Light theme on Amazon showing page title and description results"></a><figcaption>Light theme: page title and description.</figcaption></figure>
+        <figure><a class="screenshot-frame" href="./assets/screenshot-03.png"><span class="window-bar" aria-hidden="true"><span>MetaRadar / Amazon</span><span>Dark theme</span></span><img src="./assets/screenshot-03.png" width="1280" height="800" loading="lazy" alt="MetaRadar in Dark theme on Amazon showing Open Graph, H1, canonical and hreflang results"></a><figcaption>Dark theme: Open Graph, headings and alternate links.</figcaption></figure>
+      </div>
+    </section>
+    <section class="details" aria-label="Permissions and local installation">
+      <div class="detail-panel"><h2>Permissions</h2><p class="muted">Three permissions for a focused tool.</p><dl class="permissions">
+        <div><dt><code>activeTab</code></dt><dd>Temporary access to the active page after the user invokes MetaRadar.</dd></div>
+        <div><dt><code>scripting</code></dt><dd>Runs MetaRadar’s packaged read-only page reader.</dd></div>
+        <div><dt><code>storage</code></dt><dd>Stores only the selected theme preference locally.</dd></div>
+      </dl></div>
+      <div class="detail-panel"><h2>Local Installation</h2><ol class="installation">
+        <li>Download or clone the GitHub repository.</li>
+        <li>Open <code>chrome://extensions</code>.</li>
+        <li>Enable <strong>Developer mode</strong>.</li>
+        <li>Select <strong>Load unpacked</strong>.</li>
+        <li>Choose the project root containing <code>manifest.json</code>.</li>
+      </ol><p class="note">Chrome Web Store publication is under consideration.</p></div>
+    </section>
+  </main>
+  <footer class="wrap">
+    <div class="footer-top"><span class="brand">MetaRadar</span><nav aria-label="Footer navigation"><a href="https://github.com/korayaltunbey/MetaRadar">GitHub</a><a href="./privacy-policy">Privacy Policy</a><a href="./privacy-policy-tr" lang="tr">Türkçe Gizlilik Politikası</a></nav></div>
+    <div class="footer-bottom"><p>Contact: <a href="mailto:altunbeykoray07@gmail.com">altunbeykoray07@gmail.com</a></p><span>2026</span></div>
+  </footer>
 </body>
 </html>
