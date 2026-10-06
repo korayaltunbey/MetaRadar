@@ -71,5 +71,3 @@ node scripts/check-project.js
 ## Status
 
 Version 1.0.0
-
-Chrome Web Store publication is under consideration.
