@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MetaRadar</title>
+    <link rel="stylesheet" href="popup.css">
+    <script type="module" src="popup.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <span class="radar-mark" aria-hidden="true"><span></span></span>
+        <div>
+          <h1>MetaRadar</h1>
+          <p>Sayfanın SEO etiketlerine hızlı bakış</p>
+        </div>
+      </div>
+      <span class="local-label">YEREL</span>
+    </header>
+
+    <section class="page-context" aria-label="İncelenen sayfa">
+      <div class="page-context-heading">
+        <span class="section-label">AKTİF SAYFA</span>
+        <div class="theme-control">
+          <span class="section-label">TEMA</span>
+          <div id="theme-select" class="theme-options" role="group" aria-label="Tema tercihi">
+            <button class="theme-option" type="button" data-theme-option="system" aria-pressed="true">System</button>
+            <button class="theme-option" type="button" data-theme-option="light" aria-pressed="false">Light</button>
+            <button class="theme-option" type="button" data-theme-option="dark" aria-pressed="false">Dark</button>
+          </div>
+        </div>
+      </div>
+      <p id="page-host">Sayfa okunuyor…</p>
+    </section>
+
+    <main>
+      <div class="toolbar">
+        <h2>Temel kontroller</h2>
+        <button id="refresh-button" type="button" disabled>Tekrar kontrol et</button>
+      </div>
+      <p id="feedback" class="feedback" role="status" aria-live="polite">Sayfa etiketleri okunuyor…</p>
+      <p id="access-error" class="access-error" role="alert" hidden></p>
+      <ul id="results" class="results" aria-label="SEO kontrol sonuçları" aria-busy="true"></ul>
+    </main>
+
+    <footer>
+      <p>Sayfa verileri kaydedilmez veya gönderilmez. Yalnızca tema tercihi saklanır.</p>
+      <p>Uyarılar öneridir; sıralama veya indekslenme garantisi değildir.</p>
+    </footer>
+
+    <template id="result-template">
+      <li class="result">
+        <div class="result-heading">
+          <h3></h3>
+          <span class="status-badge"></span>
+        </div>
+        <p class="result-value" dir="auto"></p>
+        <p class="result-message"></p>
+      </li>
+    </template>
+  </body>
+</html>

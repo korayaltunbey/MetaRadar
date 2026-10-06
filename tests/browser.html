@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MetaRadar browser tests</title>
+    <link rel="stylesheet" href="../src/popup/popup.css">
+    <script type="module" src="browser.js"></script>
+  </head>
+  <body>
+    <section class="page-context"><span class="section-label">TEST REPORT</span><p id="report" role="status">Running…</p></section>
+    <iframe id="popup-preview" title="Actual popup preview" style="display: block; width: 420px; max-width: 100%; height: 600px; border: 0;"></iframe>
+    <ul id="results" class="results" hidden></ul>
+    <iframe id="fixture" title="Local SEO fixture" hidden></iframe>
+    <template id="result-template">
+      <li class="result">
+        <div class="result-heading"><h3></h3><span class="status-badge"></span></div>
+        <p class="result-value" dir="auto"></p><p class="result-message"></p>
+      </li>
+    </template>
+  </body>
+</html>

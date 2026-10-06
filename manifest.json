@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "MetaRadar",
+  "version": "1.0.0",
+  "minimum_chrome_version": "95",
+  "description": "Aktif sayfanın temel SEO etiketlerini yerel inceler. Sayfa verileri dışarı gönderilmez veya kalıcı saklanmaz.",
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_title": "MetaRadar — Sayfayı kontrol et",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png",
+      "48": "assets/icons/icon-48.png",
+      "128": "assets/icons/icon-128.png"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+  }
+}
